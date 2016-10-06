@@ -1,0 +1,1 @@
+# Sinatra Skeleton for the people
