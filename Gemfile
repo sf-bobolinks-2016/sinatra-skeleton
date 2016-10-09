@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'dotenv-rails', :groups => [:development, :test]
+
 gem 'unicorn'
 
 # PostgreSQL driver
@@ -29,4 +29,5 @@ end
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
+  gem 'dotenv'
 end
