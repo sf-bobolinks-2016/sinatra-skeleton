@@ -1,5 +1,5 @@
 get '/users/new' do
-  puts ":in users/new:"
+  puts 'in users-new controller'
   erb :"users/new"
 end
 

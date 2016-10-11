@@ -1,17 +1,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-
+<header>
 <% if current_user %>
 <h1>Welcome <%= current_user.first_name %> </h1>
 <%else%>
   <h1>Welcome</h1>
-  <p>Please log in to subscribe to TV channels</p>
+  <p>Please log in to see nasty tweets from presidential candidates</p>
 <%end%>
-
+</header>
 
 
   <div class="center">
-   <a id="subscriptionLink" href= "/users/:id"> Subscriptions  </a>
-   <div id='update-div'></div>
+
   </div>
 
 
