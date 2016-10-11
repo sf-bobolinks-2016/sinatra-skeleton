@@ -21,12 +21,13 @@ helpers do
   end
 
   def trump_stream
+    start_client
     @client.user({:with => '25073877'}) do |object|
       puts object if object.is_a?(Twitter::Tweet)
      end
   end
   def everything
-
+    start_client
     @client.sample do |object|
       puts object.text if object.is_a?(Twitter::Tweet)
     end
