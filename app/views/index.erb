@@ -1,3 +1,17 @@
-<div class="container">
-	<h1>HELLO DBC!!!</h1>
-</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+<% if current_user %>
+<h1>Welcome <%= current_user.first_name %> </h1>
+<%else%>
+  <h1>Welcome</h1>
+  <p>Please log in to subscribe to TV channels</p>
+<%end%>
+
+
+
+  <div class="center">
+   <a id="subscriptionLink" href= "/users/:id"> Subscriptions  </a>
+   <div id='update-div'></div>
+  </div>
+
+

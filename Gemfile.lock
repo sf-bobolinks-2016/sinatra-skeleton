@@ -17,6 +17,7 @@ GEM
     addressable (2.4.0)
     arel (6.0.3)
     backports (3.6.8)
+    bcrypt (3.1.11)
     builder (3.2.2)
     capybara (2.7.1)
       addressable
@@ -99,6 +100,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 4.2.0)
   activesupport (~> 4.2.0)
+  bcrypt
   capybara
   dotenv
   factory_girl

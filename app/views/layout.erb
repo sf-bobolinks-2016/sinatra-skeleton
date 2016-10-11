@@ -7,11 +7,29 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
- 
+
 
   <title></title>
 </head>
 <body>
+<header role="banner" class="mar-t-5 pad-t-2 pad-b-4 pad-s-1 wrap-float bg-white">
+    <div class="max-w-700 center wrap-float">
+      <nav class="clearfix mar-b-1">
+        <ul class="no-bullets no-margin no-padding right">
+          <% if current_user %>
+           <%= erb :'nav/logged_in'  %>
+            <%else%>
+            <%= erb :'nav/logged_out' %>
+            <%end %></li>
+        </ul>
+      </nav>
+
+      <div class="logo-container">
+
+        <h1>SUBSCRIPTIONS</h1>
+      </div>
+    </div>
+  </header>
   <%= yield %>
 </body>
 </html>
