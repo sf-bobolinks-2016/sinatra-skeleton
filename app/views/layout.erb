@@ -7,11 +7,28 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
- 
+
 
   <title></title>
 </head>
 <body>
-  <%= yield %>
+<header>
+    <div>
+      <nav>
+        <ul> hello
+          <% if current_user %>
+              <%= erb :'nav/logged_in'  %>
+          <%else%>
+              <%= erb :'nav/logged_out' %>
+          <%end %></li>
+        </ul>
+      </nav>
+      <div class="logo-container">
+        <h1>TITLE GOES HERE</h1>
+      </div>
+      </div>
+</header>
+ <%= yield%>
+
 </body>
 </html>
