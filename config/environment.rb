@@ -6,11 +6,10 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 # Require gems we care about
 require 'rubygems'
-require 'dotenv'
-Dotenv.load
+require 'pry'
 require 'uri'
 require 'pathname'
-
+require 'twitter'
 require 'pg'
 require 'active_record'
 require 'logger'
@@ -21,10 +20,11 @@ require "sinatra/json"
 
 # CORS
 require 'sinatra/cross_origin'
-
+require 'bcrypt'
 require 'erb'
 require 'haml'
-
+require 'dotenv'
+Dotenv.load
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 

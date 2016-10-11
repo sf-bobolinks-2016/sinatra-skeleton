@@ -1,0 +1,32 @@
+body {
+
+}
+nav {
+  padding-left:60%;
+}
+
+.navbar {
+  display:inline;
+  list-style: none;
+}
+
+.content-wrapper{
+  border:solid black 8px;
+  border-radius: 10%;
+  background-color: red;
+  height: 680px;
+}
+.leftbox {
+/*  dispaly:inline-box;*/
+  margin-top: 50px;
+  float:left;
+  width: 45%;
+  border:solid blue 3px;
+}
+.rightbox{
+ /* display:inline-box;*/
+  margin-top: 50px;
+  float:right;
+  width: 45%;
+  border:solid blue 3px;
+}

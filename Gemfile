@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-gem 'dotenv-rails', :groups => [:development, :test]
-gem 'unicorn'
 
+gem 'unicorn'
+gem 'pry'
 # PostgreSQL driver
 gem 'pg'
 
@@ -12,11 +12,11 @@ gem "sinatra-cross_origin", "~> 0.3.1"
 
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
-
+gem 'twitter'
 gem 'rake'
 
 gem 'shotgun'
-
+gem 'bcrypt'
 gem 'haml'
 
 group :test do
@@ -29,4 +29,5 @@ end
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
+  gem 'dotenv'
 end
