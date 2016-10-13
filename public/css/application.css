@@ -11,10 +11,8 @@ nav {
 }
 
 .content-wrapper{
-  border:solid black 8px;
-  border-radius: 10%;
-  background-color: red;
-  height: 680px;
+
+  height: 500px;
 }
 .leftbox {
 /*  dispaly:inline-box;*/
@@ -29,4 +27,8 @@ nav {
   float:right;
   width: 45%;
   border:solid blue 3px;
+}
+
+#map{
+  height:100%;
 }

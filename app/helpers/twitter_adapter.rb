@@ -12,17 +12,49 @@ helpers do
     end
   end
 
+  def individual_request
+     if @client.is_a?(Twitter::Streaming::Client)
+      return @client
+    end
+      @client = Twitter::REST::Client.new do |config|
+      config.consumer_key = ENV['CONSUMER_KEY']
+      config.consumer_secret = ENV['CONSUMER_SECRET']
+      config.access_token =  ENV['ACCESS_TOKEN']
+      config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
+      end
+  end
+
   def trump_talk
     start_client
-    @client.filter({:follow => '25073877'}) do |object|
+    @trump_RT_array = []
+    @client.filter({:follow => '25073877', :locations => '-122.75,36.8,-121.75,37.8'}) do |object|
+    @trump_RT_array << object if object.is_a?(Twitter::Tweet) && object.place.id
+            if @trump_RT_array.length > 20
 
-      puts object if object.is_a?(Twitter::Tweet)
+          return @trump_RT_array
+          end
+        end
     end
+   def clint_talk
+    start_client
+    @clint_RT_array = []
+    @client.filter({:follow => '1339835893', :locations => '-122.75,36.8,-121.75,37.8'}) do |object|
+    @clint_RT_array << object if object.is_a?(Twitter::Tweet) && object.place.id
+            if @clint_RT_array.length > 20
+
+
+
+          return @clint_RT_array
+          end
+        end
+    end
+
+
   end
 
   def trump_stream
     @client.user({:with => '25073877'}) do |object|
-      puts object if object.is_a?(Twitter::Tweet)
+       object if object.is_a?(Twitter::Tweet)
      end
   end
   def everything
@@ -31,5 +63,5 @@ helpers do
       puts object.text if object.is_a?(Twitter::Tweet)
     end
   end
-end
+
 
