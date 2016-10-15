@@ -9,16 +9,11 @@
     <div class= "leftbox">
        <h2>TRUMP TWEETS</h2>
 
-        <%@trump_RT_array.each do |object|%>
-        <li><%=object.text%></li>
-         <%end%>
 
     </div>
     <div class = "rightbox">
       <h2>CLINTON TWEETS</h2>
-      <%@clint_RT_array.each do |object|%>
-        <li><%=object.text%></li>
-         <%end%>
+
     </div>
     <div></div>
 </div>
@@ -36,7 +31,7 @@
           center: {lat: 37.773972, lng: -122.431297},
           zoom: 6
         });
-7
+
 
 
   generateMarker(-121.82376, 37.63653);
