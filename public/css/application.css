@@ -5,9 +5,13 @@ nav {
   padding-left:60%;
 }
 
-.navbar {
+
+.nav-pipe{
   display:inline;
   list-style: none;
+  border-right:1px solid orange;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .content-wrapper{
