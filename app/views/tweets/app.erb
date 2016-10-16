@@ -45,7 +45,9 @@
       function generateMarker(longitude, Latitude){
         return new google.maps.Marker({
           position: {lat: Latitude, lng: longitude},
-          map: map
+          map: map,
+          animation: google.maps.Animation.DROP
+
         });
       }
     </script>
