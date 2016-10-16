@@ -30,7 +30,7 @@ helpers do
     @client.filter({:follow => '25073877', :locations => '-122.75,36.8,-121.75,37.8'}) do |object|
          Tweet.create!(username: object.to_h[:user][:screen_name], tweet: object.text, party: "R", lat: object.to_h[:geo][:coordinates][0], long: object.to_h[:geo][:coordinates][1]) if object.is_a?(Twitter::Tweet) && object.to_h[:geo] != nil
      count += 1
-      if count > 300
+      if count > 100
         puts "added 300 tweets to DB"
         break
       end

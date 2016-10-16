@@ -4,8 +4,8 @@ class CreateTweets < ActiveRecord::Migration
       t.string :username
       t.string :tweet
       t.string :party
-      t.integer :lat
-      t.integer :long
+      t.float :lat
+      t.float :long
       t.timestamps
     end
   end

@@ -25,6 +25,7 @@
 
    <script type="text/javascript">
       var map;
+      var tweets;
       // generate map
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -33,16 +34,19 @@
         });
 
 
+        <%@tweet = Tweet.all%>
+        <%@tweet.each do |tweet|%>
+          setTimeout(function(){
+            generateMarker(<%=tweet.long%>,<%=tweet.lat%>);
+          }, <%= (1000..100_000).to_a.sample %>);
+        <%end%>
 
-  generateMarker(-121.82376, 37.63653);
-  generateMarker( -122.436560,37.801815);
-  generateMarker(-122.468392,37.804815);
-}
-    function generateMarker(longitude, Latitude){
-      return new google.maps.Marker({
-      position: {lat: Latitude, lng: longitude},
-      map: map
-      });
-    }
+      }
+      function generateMarker(longitude, Latitude){
+        return new google.maps.Marker({
+          position: {lat: Latitude, lng: longitude},
+          map: map
+        });
+      }
     </script>
 
