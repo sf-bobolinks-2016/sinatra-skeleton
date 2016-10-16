@@ -1,3 +1,3 @@
-class Candidate < ActiveRecord::Base
+class Trump < ActiveRecord::Base
   # Remember to create a migration!
 end
