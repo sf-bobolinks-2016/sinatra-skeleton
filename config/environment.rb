@@ -5,11 +5,11 @@ ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
 require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 # Require gems we care about
-require 'rubygems'  
-
+require 'rubygems'
+require 'pry'
 require 'uri'
 require 'pathname'
-
+require 'twitter'
 require 'pg'
 require 'active_record'
 require 'logger'
@@ -20,22 +20,23 @@ require "sinatra/json"
 
 # CORS
 require 'sinatra/cross_origin'
-
+require 'bcrypt'
 require 'erb'
 require 'haml'
-
+require 'dotenv'
+Dotenv.load
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
 APP_NAME = APP_ROOT.basename.to_s
 
 configure do
-  
+
   # ------------------------------------------------
   # If you want to share this with the DBC network.
   # ------------------------------------------------
   # Get your ip by running this in the console:
-  
+
   # $ ifconfig en0 inet
 
   # You'll see this prompt:

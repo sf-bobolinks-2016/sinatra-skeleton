@@ -1,0 +1,57 @@
+body {
+
+}
+nav {
+  padding-left:60%;
+}
+
+h2 {
+  text-align: center;
+}
+.election-banner{
+
+}
+.embeded-timelines{
+  overflow-y: scroll;
+  height:300px;
+}
+.nav-pipe{
+  display:inline;
+  list-style: none;
+  border-right:1px solid orange;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.content-wrapper{
+
+  height: 500px;
+}
+.leftbox {
+margin-left: 30px;
+overflow-y: scroll;
+  height:500px;
+  margin-top: 50px;
+  float:left;
+  width: 45%;
+  border:solid blue 5px;
+  border-radius: 2%;
+}
+.rightbox{
+  margin-right: 30px;
+  overflow-y: scroll;
+  height:500px;
+  margin-top: 50px;
+  float:right;
+  width: 45%;
+  border:solid blue 3px;
+  border:solid blue 5px;
+  border-radius: 2%;
+}
+
+#map{
+  height:100%;
+}
+----------------
+
+

@@ -1,0 +1,54 @@
+
+
+<div class="content-wrapper">
+  <div id="map"></div>
+  <div class="election-banner">IMAGE GOES HERE</div> 
+
+
+
+    <div class= "leftbox">
+       <h2>TRUMP TWEETS</h2>
+           <a class="twitter-timeline" href="https://twitter.com/realDonaldTrump">Tweets by realDonaldTrump</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    </div>
+    <div class = "rightbox">
+      <h2>CLINTON TWEETS</h2>
+         <a class="twitter-timeline" href="https://twitter.com/HillaryClinton">Tweets by HillaryClinton</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    <div></div>
+</div>
+
+<!-- Map scripts  -->
+ <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=<%=@map_key%>&callback=initMap">
+    </script>
+
+   <script type="text/javascript">
+      var map;
+      var tweets;
+      // generate map
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 37.773972, lng: -122.431297},
+          zoom: 6
+        });
+
+
+        <%@tweet = Tweet.all%>
+        <%@tweet.each do |tweet|%>
+          setTimeout(function(){
+            generateMarker(<%=tweet.long%>,<%=tweet.lat%>);
+          }, <%= (1000..100_000).to_a.sample %>);
+        <%end%>
+
+      }
+      function generateMarker(longitude, Latitude){
+        return new google.maps.Marker({
+          position: {lat: Latitude, lng: longitude},
+          map: map,
+          animation: google.maps.Animation.DROP
+
+        });
+      }
+    </script>
+
