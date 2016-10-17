@@ -8,6 +8,9 @@ nav {
 h2 {
   text-align: center;
 }
+.election-banner{
+
+}
 .embeded-timelines{
   overflow-y: scroll;
   height:300px;
@@ -25,7 +28,7 @@ h2 {
   height: 500px;
 }
 .leftbox {
-margin-left: 20px;
+margin-left: 30px;
 overflow-y: scroll;
   height:500px;
   margin-top: 50px;
@@ -35,7 +38,7 @@ overflow-y: scroll;
   border-radius: 2%;
 }
 .rightbox{
-  margin-right: 20px;
+  margin-right: 30px;
   overflow-y: scroll;
   height:500px;
   margin-top: 50px;
@@ -49,3 +52,6 @@ overflow-y: scroll;
 #map{
   height:100%;
 }
+----------------
+
+
