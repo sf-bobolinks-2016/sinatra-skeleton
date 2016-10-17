@@ -5,7 +5,13 @@ nav {
   padding-left:60%;
 }
 
-
+h2 {
+  text-align: center;
+}
+.embeded-timelines{
+  overflow-y: scroll;
+  height:300px;
+}
 .nav-pipe{
   display:inline;
   list-style: none;
@@ -19,18 +25,25 @@ nav {
   height: 500px;
 }
 .leftbox {
-/*  dispaly:inline-box;*/
+margin-left: 20px;
+overflow-y: scroll;
+  height:500px;
   margin-top: 50px;
   float:left;
   width: 45%;
-  border:solid blue 3px;
+  border:solid blue 5px;
+  border-radius: 2%;
 }
 .rightbox{
- /* display:inline-box;*/
+  margin-right: 20px;
+  overflow-y: scroll;
+  height:500px;
   margin-top: 50px;
   float:right;
   width: 45%;
   border:solid blue 3px;
+  border:solid blue 5px;
+  border-radius: 2%;
 }
 
 #map{
